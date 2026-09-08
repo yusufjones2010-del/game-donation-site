@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDonation - Донаты в FF, MLBB, PUBG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">💎 GameDonation</div>
+        <nav class="nav">
+            <a href="#games">Игры</a>
+            <a href="#packages">Пакеты</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <h1>Донаты для твоей любимой игры</h1>
+        <p>Быстрая и безопасная пополнение баланса в Free Fire, MLBB и PUBG</p>
+        <a href="#games" class="cta-button">Начать донат</a>
+    </div>
+
+    <section id="games" class="games-section">
+        <h2>Выбери игру</h2>
+        <div class="games-container">
+            <div class="game-card" onclick="selectGame('ff')">
+                <div class="game-icon">🔥</div>
+                <h3>Free Fire</h3>
+                <p>Боевой рояль</p>
+            </div>
+            <div class="game-card" onclick="selectGame('mlbb')">
+                <div class="game-icon">⚔️</div>
+                <h3>Mobile Legends</h3>
+                <p>MOBA игра</p>
+            </div>
+            <div class="game-card" onclick="selectGame('pubg')">
+                <div class="game-icon">🎯</div>
+                <h3>PUBG Mobile</h3>
+                <p>Боевой рояль</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="donation" class="donation-section" style="display: none;">
+        <div class="donation-container">
+            <button class="back-button" onclick="backToGames()">← Назад</button>
+            
+            <h2 id="selectedGameTitle"></h2>
+
+            <div class="form-group">
+                <label for="nickname">Никнейм в игре:</label>
+                <input type="text" id="nickname" placeholder="Введите ваш никнейм" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+
+            <h3>Выбери сумму доната</h3>
+            <div class="packages" id="packages">
+                <!-- Пакеты будут добавлены JS -->
+            </div>
+
+            <div class="form-group">
+                <label for="promoCode">Промокод (опционально):</label>
+                <input type="text" id="promoCode" placeholder="Введите промокод">
+            </div>
+
+            <div class="total-price">
+                <span>К оплате:</span>
+                <span id="totalPrice">0 ₽</span>
+            </div>
+
+            <button class="pay-button" onclick="processPayment()">Оплатить</button>
+        </div>
+    </section>
+
+    <section id="packages" class="packages-info">
+        <h2>Популярные пакеты</h2>
+        <div class="packages-grid">
+            <div class="package-item">
+                <h4>💰 Малый</h4>
+                <p>500 ₽</p>
+                <span>5-10 алмазов</span>
+            </div>
+            <div class="package-item">
+                <h4>💵 Средний</h4>
+                <p>1000 ₽</p>
+                <span>10-20 алмазов</span>
+            </div>
+            <div class="package-item">
+                <h4>💎 Большой</h4>
+                <p>5000 ₽</p>
+                <span>50-100 алмазов</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>❓ Как долго идёт пополнение?</h4>
+                <p>Обычно 5-15 минут после успешной оплаты.</p>
+            </div>
+            <div class="faq-item">
+                <h4>❓ Безопасно ли вводить никнейм?</h4>
+                <p>Да, мы используем шифрование SSL и не запрашиваем пароль.</p>
+            </div>
+            <div class="faq-item">
+                <h4>❓ Какие способы оплаты?</h4>
+                <p>Карты (Visa/Mastercard), Яндекс.Касса, Сбербанк, WebMoney.</p>
+            </div>
+            <div class="faq-item">
+                <h4>❓ Можно ли вернуть деньги?</h4>
+                <p>Да, в течение 24 часов, если донат не был зачислен.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts-section">
+        <h2>Контакты</h2>
+        <div class="contacts-info">
+            <p>📧 Email: support@gamedonation.ru</p>
+            <p>💬 Telegram: @gamedonation_support</p>
+            <p>⏰ Время поддержки: 24/7</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 GameDonation. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <h1>😂 Joke Generator</h1>
+            <p class="subtitle">Get a random joke to brighten your day!</p>
+            
+            <div class="joke-display" id="jokeDisplay">
+                <p class="loading">Click the button to get a joke...</p>
+            </div>
+            
+            <div class="category-selector">
+                <label for="category">Select Category:</label>
+                <select id="category">
+                    <option value="any">Any</option>
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock-Knock</option>
+                </select>
+            </div>
+            
+            <div class="button-group">
+                <button id="getJokeBtn" class="btn btn-primary">Get Joke</button>
+                <button id="shareBtn" class="btn btn-secondary" style="display: none;">Share</button>
+                <button id="copyBtn" class="btn btn-secondary" style="display: none;">Copy</button>
+            </div>
+            
+            <div class="stats">
+                <p>Jokes loaded: <span id="jokeCount">0</span></p>
+                <p>Favorite: <span id="favoriteCount">0</span></p>
+            </div>
+            
+            <div class="favorites-section">
+                <h3>❤️ Your Favorites</h3>
+                <div id="favoritesList" class="favorites-list"></div>
+                <button id="clearFavBtn" class="btn btn-danger" style="display: none; margin-top: 1rem;">Clear All Favorites</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="joke-script.js"></script>
+</body>
+</html>
